@@ -1,0 +1,6 @@
+Material: mtl_crr_aircraft_tugger_ext
+{
+	0: ~mtl_crr_aircraft_tugger_ext_~3b8da1f0 (Spec)
+	1: mtl_crr_aircraft_tugger_ext_nml (Normal)
+	2: mtl_crr_aircraft_tugger_ext_col (Diffuse)
+}

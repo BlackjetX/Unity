@@ -1,0 +1,30 @@
+Material: mtl_bm_21_glass
+{
+	0: ~bm21_glass_spc-rgb&bm21_glas~38f474f8 (Spec)
+	1: bm21_glass_nrm (Normal)
+	2: bm21_glass_col (Diffuse)
+}
+Material: mtl_bm_21_truck_tires
+{
+	0: ~bm21_body_spc-rgb&bm21_body_cos-l-67 (Spec)
+	1: bm21_body_nrm (Normal)
+	2: bm21_body_col (Diffuse)
+}
+Material: mtl_bm_21_truck_base
+{
+	0: ~bm21_body_spc-rgb&bm21_body_cos-l-67 (Spec)
+	1: bm21_body_nrm (Normal)
+	2: bm21_body_col (Diffuse)
+}
+Material: mtl_bm_21_truck_bed
+{
+	0: ~b21_bed_cover_spc-rgb&b21_be~7a85b54c (Spec)
+	1: b21_bed_cover_nrm (Normal)
+	2: b21_bed_cover_col (Diffuse)
+}
+Material: mtl_bm_21_truck_cover
+{
+	0: ~b21_bed_cover_spc-rgb&b21_be~7a85b54c (Spec)
+	1: b21_bed_cover_nrm (Normal)
+	2: b21_bed_cover_col (Diffuse)
+}

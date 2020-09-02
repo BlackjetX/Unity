@@ -1,0 +1,29 @@
+Material: mtl_vehicle_battle_hind_blades_alpha
+{
+	0: ~vehicle_battle_hind_blades_s~cfc4a915 (Spec)
+	1: $identitynormalmap (Normal)
+	2: vehicle_battle_hind_blades_col (Diffuse)
+}
+Material: mtl_vehicle_battle_hind
+{
+	0: ~vehicle_battle_hind_spc-rgb&~18fb6cf1 (Spec)
+	1: vehicle_battle_hind_nml (Normal)
+	2: vehicle_battle_hind_col_blendy (Diffuse)
+}
+Material: mtl_vehicle_battle_hind_blades
+{
+	0: $identitynormalmap (Normal)
+	1: vehicle_battle_hind_blades_col (Diffuse)
+}
+Material: mtl_vehicle_battle_hind_glass
+{
+	0: ~vehicle_battle_hind_spc-rgb&~bd937e2d (Spec)
+	1: $identitynormalmap (Normal)
+	2: vehicle_battle_hind_col (Diffuse)
+}
+Material: mtl_vehicle_battle_hind_blades_back
+{
+	0: ~vehicle_battle_hind_blades_s~cfc4a915 (Spec)
+	1: $identitynormalmap (Normal)
+	2: vehicle_battle_hind_blades_col (Diffuse)
+}

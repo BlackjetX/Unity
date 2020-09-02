@@ -1,0 +1,6 @@
+Material: mtl_vehicle_bmp
+{
+	0: ~vehicle_bmp_spc-r-80g-80b-80~c2a6d03d (Spec)
+	1: vehicle_bmp_nml (Normal)
+	2: vehicle_bmp_col (Diffuse)
+}

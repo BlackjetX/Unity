@@ -1,0 +1,7 @@
+Material: mtl_ls_ambulance_tires
+{
+	0: ~vehicle_ambulance_tires_spc-~bfcfc575 (Spec)
+	1: ls_dust_mask ()
+	2: vehicle_ambulance_tires_nml (Normal)
+	3: vehicle_ambulance_tires_col (Diffuse)
+}

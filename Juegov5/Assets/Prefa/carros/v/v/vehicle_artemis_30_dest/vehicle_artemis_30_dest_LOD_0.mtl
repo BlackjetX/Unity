@@ -1,0 +1,12 @@
+newmtl mtl_vehicle_artemis_30_decal_dest
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl mtl_vehicle_artemis_30_dest
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl mtl_vehicle_artemis_30_tires_dest
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0

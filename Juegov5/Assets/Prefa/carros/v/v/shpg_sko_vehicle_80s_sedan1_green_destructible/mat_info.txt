@@ -1,0 +1,11 @@
+Material: shpg_wreck_rust_a
+{
+	0: ~shpg_wreck_rust_a_spc-rgb&sh~762fe333 (Spec)
+	1: shpg_wreck_rust_a_nm (Normal)
+	2: shpg_wreck_rust_a_col (Diffuse)
+}
+Material: mtl_engine
+{
+	0: car_engine_nml (Normal)
+	1: car_engine_col (Diffuse)
+}

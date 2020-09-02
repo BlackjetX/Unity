@@ -1,0 +1,6 @@
+Material: mtl_vehicle_btr80_snow
+{
+	0: ~vehicle_btr80_snow_spc-rgb&v~cfcf9c4d (Spec)
+	1: vehicle_btr80_snow_nml (Normal)
+	2: vehicle_btr80_snow_col (Diffuse)
+}

@@ -1,0 +1,20 @@
+newmtl mtl_ls_ambulance_int
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl mtl_vehicle_civilian_sedan_glass_iw6
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl mtl_engine_destroy
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl mtl_ls_ambulance_crashed@las_vegas
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl mtl_vehicle_civilian_sedan_glass_inner_iw6
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0

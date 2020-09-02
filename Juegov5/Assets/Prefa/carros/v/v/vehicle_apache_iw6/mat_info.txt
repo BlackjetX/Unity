@@ -1,0 +1,74 @@
+Material: mtl_vehicle_apache_iw6
+{
+	0: ~vehicle_apache_iw6_spc-rgb&v~bdcebb6a (Spec)
+	1: vehicle_apache_iw6_nml (Normal)
+	2: vehicle_apache_iw6_col (Diffuse)
+}
+Material: mtl_vehicle_apache_iw6_blades
+{
+	0: ~vehicle_apache_iw6_blades_sp~dcc672b0 (Spec)
+	1: $identitynormalmap (Normal)
+	2: vehicle_apache_iw6_blades_col (Diffuse)
+}
+Material: mtl_vehicle_apache_iw6_glass
+{
+	0: ~vehicle_apache_iw6_glass_spc~f67d18b3 (Spec)
+	1: vehicle_apache_iw6_glass_nml (Normal)
+	2: vehicle_apache_iw6_glass_col (Diffuse)
+}
+Material: mtl_vehicle_apache_iw6_interior
+{
+	0: ~vehicle_apache_iw6_interior_~89d9d7ab (Spec)
+	1: $identitynormalmap (Normal)
+	2: vehicle_apache_iw6_interior_col (Diffuse)
+}
+Material: mtl_vehicle_apache_iw6_blades_alpha
+{
+	0: ~vehicle_apache_iw6_blades_sp~dcc672b0 (Spec)
+	1: $identitynormalmap (Normal)
+	2: vehicle_apache_iw6_blades_col (Diffuse)
+}
+Material: mtl_vehicle_apache_iw6_interior_add
+{
+	0: vehicle_apache_iw6_interior_col (Diffuse)
+}
+Material: mtl_pilot_head_a
+{
+	0: ~ppilot_head_a_spc-r-42g-42b-~e478629c (Spec)
+	1: ppilot_head_a_nml (Normal)
+	2: ppilot_head_a_col (Diffuse)
+}
+Material: mtl_pilot_headgear_a
+{
+	0: ~ppilot_headgear_a_spc-r-42g-~91d43d3e (Spec)
+	1: ppilot_headgear_a_nml (Normal)
+	2: ppilot_headgear_a_col (Diffuse)
+}
+Material: mtl_pilot_upperbody_b
+{
+	0: ~ppilot_upper_body_b_spc-rgb&~a68d7d6a (Spec)
+	1: ppilot_upper_body_b_nml (Normal)
+	2: ppilot_upper_body_b_col (Diffuse)
+	3: ppilot_upper_body_b_lobe ()
+	4: ppilot_upper_body_b_lobe ()
+}
+Material: mtl_pilot_glove_a
+{
+	0: ~ppilot_glove_a_spc-r-42g-42b~1ef080cf (Spec)
+	1: ppilot_glove_a_nml (Normal)
+	2: ppilot_glove_a_col (Diffuse)
+}
+Material: mtl_pilot_lowerbody_b
+{
+	0: ~ppilot_lower_body_b_spc-rgb&~b2f94f7c (Spec)
+	1: ppilot_lower_body_b_nml (Normal)
+	2: ppilot_lower_body_b_col (Diffuse)
+	3: ppilot_lower_body_b_lobe ()
+	4: ppilot_lower_body_b_lobe ()
+}
+Material: mtl_pilot_boot_a
+{
+	0: ~ppilot_boots_a_spc-rgb&ppilo~6a0f35e9 (Spec)
+	1: ppilot_boots_a_nml (Normal)
+	2: ppilot_boots_a_col (Diffuse)
+}

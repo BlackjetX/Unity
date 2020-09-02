@@ -1,0 +1,108 @@
+Material: saf_c17_aircraft_metal_01
+{
+	0: ~saf_c17_aircraft_metal_01_sp~5b1b1f3e (Spec)
+	1: saf_c17_aircraft_metal_01_nml (Normal)
+	2: saf_c17_aircraft_metal_01_col (Diffuse)
+}
+Material: saf_c17_glass_opaque
+{
+	0: ~$white-r64g64b64&$black-l32 (Spec)
+	1: $identitynormalmap (Normal)
+	2: $black (Diffuse)
+}
+Material: saf_brushedmetal_01
+{
+	0: ~clk_stainless_steel_02_spc-r~45ce588f (Spec)
+	1: $identitynormalmap (Normal)
+	2: fac_brushedmetal_col (Diffuse)
+}
+Material: saf_c17_graphics
+{
+	0: $identitynormalmap (Normal)
+	1: saf_c17_graphics_col (Diffuse)
+}
+Material: saf_c17_aircraft_metal_01_dec
+{
+	0: ~saf_c17_aircraft_metal_01_sp~5b1b1f3e (Spec)
+	1: saf_c17_aircraft_metal_01_nml (Normal)
+	2: saf_c17_aircraft_metal_01_col (Diffuse)
+}
+Material: lightcard_omni_red
+{
+	0: lightcard_omni_red (Diffuse)
+}
+Material: lightcard_omni_white
+{
+	0: lightcard_omni_white (Diffuse)
+}
+Material: saf_c17_interior_plastic_02
+{
+	0: ~saf_c17_interior_plastic_2_s~1e979b2c (Spec)
+	1: $identitynormalmap ()
+	2: saf_c17_interior_plastic_2_col (Diffuse)
+	3: hjk_interior_plastic_tile_detail_nml (Normal)
+}
+Material: mtl_saf_c17_light_panel
+{
+	0: mtl_saf_c17_light_panel_col (Diffuse)
+}
+Material: mtl_saf_c17_light
+{
+	0: ~mtl_saf_c17_light_col-rgb&$black-l-67 (Spec)
+	1: $identitynormalmap (Normal)
+	2: mtl_saf_c17_light_col (Diffuse)
+}
+Material: saf_c17_yellow_pipe
+{
+	0: ~saf_c17_pipe_spc-rgb&saf_c17~a29640c0 (Spec)
+	1: saf_c17_pipe_nml (Normal)
+	2: saf_c17_pipe_yellow_col (Diffuse)
+}
+Material: saf_c17_ceiling_01
+{
+	0: ~saf_c17_ceiling_spc-r-80g-80~76d0d279 (Spec)
+	1: saf_c17_ceiling_nml (Normal)
+	2: saf_c17_ceiling_col (Diffuse)
+}
+Material: saf_c17_ceiling_01_yellow
+{
+	0: ~saf_c17_ceiling_spc-r-80g-80~76d0d279 (Spec)
+	1: saf_c17_ceiling_nml (Normal)
+	2: saf_c17_ceiling_col (Diffuse)
+}
+Material: black_ice_metal_beam_distant
+{
+	0: ~black_ice_beam_distant_spc-r~b3a81173 (Spec)
+	1: black_ice_beam_distant_nml (Normal)
+	2: black_ice_beam_distant_col (Diffuse)
+}
+Material: saf_c17_interior_plastic_01
+{
+	0: ~saf_c17_interior_plastic_spc~450a127d (Spec)
+	1: saf_c17_interior_plastic_nml ()
+	2: saf_c17_interior_plastic_col (Diffuse)
+	3: hjk_interior_plastic_tile_detail_nml (Normal)
+}
+Material: hjk_cargo_floor_02
+{
+	0: ~hjk_cargo_floor_02_uprs_spc-~e4762ec7 (Spec)
+	1: hjk_cargo_floor_02_uprs_nml (Normal)
+	2: hjk_cargo_floor_02_uprs_col (Diffuse)
+}
+Material: hjk_cargo_floor_01
+{
+	0: ~hjk_cargo_floor_01_upres_spc~7d41ecdd (Spec)
+	1: hjk_cargo_floor_01_upres_nml (Normal)
+	2: hjk_cargo_floor_01_upres_col (Diffuse)
+}
+Material: fah_vista_metal_clean_panel_01
+{
+	0: $identitynormalmap (Normal)
+	1: fah_metal_clean_panel_01_col (Diffuse)
+}
+Material: saf_metal_gray_01
+{
+	0: ~saf_plane_metal_white01_spc-~966f9e0f (Spec)
+	1: airplane_metal_01_nml (Normal)
+	2: airplane_metal_01_col (Diffuse)
+}

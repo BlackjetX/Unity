@@ -1,0 +1,4 @@
+newmtl mtl_vehicle_bmp
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0

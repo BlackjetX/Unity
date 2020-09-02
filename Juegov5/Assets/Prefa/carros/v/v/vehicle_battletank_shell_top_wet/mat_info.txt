@@ -1,0 +1,8 @@
+Material: mtl_vehicle_battletank_shell_wet
+{
+	0: ~vehicle_battletank_shell_wet~8393a91e (Spec)
+	1: vehicle_battletank_shell_nml ()
+	2: vehicle_battletank_shell_flir2 ()
+	3: vehicle_battletank_shell_col (Diffuse)
+	4: vehicle_battletank_shell_matte_nml (Normal)
+}

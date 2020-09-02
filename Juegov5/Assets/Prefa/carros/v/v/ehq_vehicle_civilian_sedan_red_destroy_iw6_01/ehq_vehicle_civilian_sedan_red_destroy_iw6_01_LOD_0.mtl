@@ -1,0 +1,24 @@
+newmtl mtl_vehicle_civilian_sedan_red_destroy_iw6_01
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl mtl_vehicle_civilian_sedan_tire_destroy_iw6
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl mtl_vehicle_civilian_sedan_interior_destroy_iw6
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl mtl_vehicle_civilian_sedan_glass_destroy_iw6
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl mtl_vehicle_civilian_sedan_glass_inner_destroy_iw6
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl mtl_vehicle_civilian_sedan_tire_metal_destroy_iw6
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0

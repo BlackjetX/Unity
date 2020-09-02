@@ -1,0 +1,18 @@
+Material: mtl_vehicle_gun_boat
+{
+	0: ~vehicle_gun_boat_spc-rgb&veh~36980d19 (Spec)
+	1: vehicle_gun_boat_nml (Normal)
+	2: vehicle_gun_boat_col (Diffuse)
+}
+Material: mtl_zodiac_boat_base
+{
+	0: ~zodiac_boat_spc-rgb&zodiac_b~5a15a2b7 (Spec)
+	1: zodiac_boat_nml (Normal)
+	2: zodiac_boat_col (Diffuse)
+}
+Material: mtl_zodiac_russian_inside
+{
+	0: ~zodiac_russian_spc-rgb&zodia~5b0c572b (Spec)
+	1: zodiac_russian_nml (Normal)
+	2: zodiac_boat_russian_col (Diffuse)
+}

@@ -1,0 +1,18 @@
+Material: mtl_vehicle_artemis_30_decal_dest
+{
+	0: ~artemis30_alpha_dest_spc-rgb~f81fa3bb (Spec)
+	1: artemis30_alpha_dest_nml (Normal)
+	2: artemis30_alpha_dest_col (Diffuse)
+}
+Material: mtl_vehicle_artemis_30_dest
+{
+	0: ~artemis30_dest_spc-rgb&artem~c63d2e52 (Spec)
+	1: artemis30_dest_nml (Normal)
+	2: artemis30_dest_col (Diffuse)
+}
+Material: mtl_vehicle_artemis_30_tires_dest
+{
+	0: ~artemis30_dest_spc-rgb&artem~c63d2e52 (Spec)
+	1: artemis30_dest_nml (Normal)
+	2: artemis30_dest_col (Diffuse)
+}

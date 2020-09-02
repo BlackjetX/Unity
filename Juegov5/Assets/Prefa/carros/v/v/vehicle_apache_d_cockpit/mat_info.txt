@@ -1,0 +1,17 @@
+Material: mtl_vehicle_apache
+{
+	0: ~vehicle_apache_spc-r18g18b18~f2887dca (Spec)
+	1: vehicle_apache_nml (Normal)
+	2: vehicle_apache_col (Diffuse)
+}
+Material: mtl_vehicle_apache_decals
+{
+	0: ~vehicle_apache_decals_spc-rg~b457fd79 (Spec)
+	1: vehicle_apache_decals_nml (Normal)
+	2: vehicle_apache_decals_col (Diffuse)
+}
+Material: mtl_cobra_pilot_woodland_lod_sp
+{
+	0: cobra_pilot_woodland_lod_sp_nml (Normal)
+	1: cobra_pilot_woodland_lod_sp_col (Diffuse)
+}

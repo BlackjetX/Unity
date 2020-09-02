@@ -1,0 +1,6 @@
+Material: mtl_vehicle_apache_iw6
+{
+	0: ~vehicle_apache_iw6_spc-rgb&v~bdcebb6a (Spec)
+	1: vehicle_apache_iw6_nml (Normal)
+	2: vehicle_apache_iw6_col (Diffuse)
+}

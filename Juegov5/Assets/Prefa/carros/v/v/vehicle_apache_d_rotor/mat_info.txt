@@ -1,0 +1,6 @@
+Material: mtl_vehicle_apache
+{
+	0: ~vehicle_apache_spc-r18g18b18~f2887dca (Spec)
+	1: vehicle_apache_nml (Normal)
+	2: vehicle_apache_col (Diffuse)
+}

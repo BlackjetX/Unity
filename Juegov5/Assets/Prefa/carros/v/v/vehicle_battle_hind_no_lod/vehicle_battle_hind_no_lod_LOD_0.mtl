@@ -1,0 +1,16 @@
+newmtl mtl_vehicle_battle_hind_blades_alpha
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl mtl_vehicle_battle_hind
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl mtl_vehicle_battle_hind_blades
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl mtl_vehicle_battle_hind_glass
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0

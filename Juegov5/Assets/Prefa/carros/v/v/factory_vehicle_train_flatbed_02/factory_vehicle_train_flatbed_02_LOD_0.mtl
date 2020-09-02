@@ -1,0 +1,16 @@
+newmtl mtl_factory_vehicle_train_flatbed_02
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl mtl_factory_vehicle_train_flatbed_02_top
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl mtl_trainwheel01_col
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl mtl_factory_train_coupler_01
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0

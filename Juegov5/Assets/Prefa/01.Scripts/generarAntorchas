@@ -1,0 +1,22 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Diagnostics;
+using UnityEngine;
+
+public class generarAntorchas : MonoBehaviour
+{
+
+    public void Awake()
+    {
+        float percent = Random.Range(0f, 1f);
+        if (percent < 0.7f)
+        {
+            Torch[] torches = this.GetComponentsInChildren<Torch>();
+            foreach(var torch in torches)
+            {
+                Destroy(torch.gameObject);
+            }
+        }
+    }
+}

@@ -1,0 +1,6 @@
+Material: mtl_vehicle_gun_boat
+{
+	0: ~vehicle_gun_boat_spc-rgb&veh~36980d19 (Spec)
+	1: vehicle_gun_boat_nml (Normal)
+	2: vehicle_gun_boat_col (Diffuse)
+}

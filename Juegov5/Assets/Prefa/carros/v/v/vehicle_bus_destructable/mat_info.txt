@@ -1,0 +1,30 @@
+Material: mtl_bus_c
+{
+	0: ~bus1_spc-rgb&bus1_cos-l-67 (Spec)
+	1: bus1_nml (Normal)
+	2: bus1_col (Diffuse)
+}
+Material: mtl_bus_window_c_inside
+{
+	0: ~bus_windows_spc-rgb&bus_wind~8120a128 (Spec)
+	1: bus_windows_nml (Normal)
+	2: bus_windows_col (Diffuse)
+}
+Material: mtl_bus_window_c_outside
+{
+	0: ~bus_windows_spc-rgb&bus_wind~8120a128 (Spec)
+	1: bus_windows_nml (Normal)
+	2: bus_windows_col (Diffuse)
+}
+Material: mtl_bus_wire
+{
+	0: ~bus_windows_spc-rgb&bus_wind~8120a128 (Spec)
+	1: bus_windows_nml (Normal)
+	2: bus_windows_col (Diffuse)
+}
+Material: mtl_bus_bottom
+{
+	0: ~bus_bottom_spc-r-20g-20b-20&~4ace292a (Spec)
+	1: bus_bottom_nml (Normal)
+	2: bus_bottom_col (Diffuse)
+}

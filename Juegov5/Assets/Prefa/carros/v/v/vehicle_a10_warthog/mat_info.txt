@@ -1,0 +1,6 @@
+Material: mtl_a10_warthog
+{
+	0: ~a10_warthog_spc-rgb&a10_wart~a869730a (Spec)
+	1: $identitynormalmap (Normal)
+	2: a10_warthog_col (Diffuse)
+}

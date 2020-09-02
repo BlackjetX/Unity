@@ -1,0 +1,19 @@
+Material: mtl_ls_ambulance_ext@nml
+{
+	0: ~vehicle_ambulance_crashed_sp~d332d7b5 (Spec)
+	1: ls_dust_mask ()
+	2: vehicle_ambulance_crashed_nml (Normal)
+	3: vehicle_ambulance_crashed_dark_col (Diffuse)
+}
+Material: mtl_ls_ambulance_int
+{
+	0: ~vehicle_ambulance_int_spc-rg~6e039cbb (Spec)
+	1: vehicle_ambulance_int_nml (Normal)
+	2: vehicle_ambulance_int_col (Diffuse)
+}
+Material: mtl_vehicle_civilian_sedan_glass_iw6
+{
+	0: ~vehicle_civilian_sedan_glass~29bfa272 (Spec)
+	1: vehicle_civilian_sedan_glass_nml (Normal)
+	2: vehicle_civilian_sedan_glass_col (Diffuse)
+}

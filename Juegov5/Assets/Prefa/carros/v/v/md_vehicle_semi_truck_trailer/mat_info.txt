@@ -1,0 +1,18 @@
+Material: mtl_truck_tires
+{
+	0: ~mtl_truck_cab_spc-rgb&mtl_tr~b71653d9 (Spec)
+	1: mtl_truck_cab_nml (Normal)
+	2: mtl_truck_cab_col (Diffuse)
+}
+Material: mtl_truck_cab
+{
+	0: ~mtl_truck_cab_spc-rgb&mtl_tr~b71653d9 (Spec)
+	1: mtl_truck_cab_nml (Normal)
+	2: mtl_truck_cab_col (Diffuse)
+}
+Material: mtl_truck_trailer
+{
+	0: ~mtl_truck_trailer_spc-rgb&mt~cacc05b5 (Spec)
+	1: mtl_truck_trailer_nml (Normal)
+	2: mtl_truck_trailer_col (Diffuse)
+}

@@ -1,0 +1,8 @@
+newmtl mtl_vehicle_apache_iw5
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl mtl_vehicle_apache_wing_iw5
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0

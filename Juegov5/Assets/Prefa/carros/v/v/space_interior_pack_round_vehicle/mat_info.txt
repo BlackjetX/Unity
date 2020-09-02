@@ -1,0 +1,8 @@
+Material: mtl_space_interior_pack_square
+{
+	0: ~space_interior_pack_square_s~7d0a93e1 (Spec)
+	1: space_interior_pack_square_nml (Normal)
+	2: space_interior_pack_square_col (Diffuse)
+	3: $white ()
+	4: $white ()
+}

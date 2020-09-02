@@ -1,0 +1,6 @@
+Material: lambert1
+{
+	0: ~black_surveillance_dome_spc-~90630625 (Spec)
+	1: $identitynormalmap (Normal)
+	2: black_surveillance_dome_col (Diffuse)
+}

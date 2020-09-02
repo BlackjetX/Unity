@@ -1,0 +1,4 @@
+Material: gfx_missing_fx
+{
+	0: missing_fx (Diffuse)
+}

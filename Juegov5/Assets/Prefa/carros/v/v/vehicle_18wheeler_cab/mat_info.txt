@@ -1,0 +1,29 @@
+Material: mtl_vehicle_18whlr_cab
+{
+	0: ~vehicle_18whlr_cab_spc-r18g1~853a1e41 (Spec)
+	1: vehicle_18whlr_cab_nml (Normal)
+	2: vehicle_18whlr_cab_col (Diffuse)
+}
+Material: mtl_vehicle_18whlr_window_outer
+{
+	0: ~vehicle_18whlr_glass_spc_col~831f6e2b (Spec)
+	1: vehicle_18whlr_glass_nml (Normal)
+	2: vehicle_18whlr_glass_col (Diffuse)
+}
+Material: mtl_vehicle_18whlr_window_inner
+{
+	0: ~vehicle_18whlr_glass_spc_col~831f6e2b (Spec)
+	1: vehicle_18whlr_glass_nml (Normal)
+	2: vehicle_18whlr_glass_col (Diffuse)
+}
+Material: mtl_vehicle_18whlr_decal
+{
+	0: $identitynormalmap (Normal)
+	1: vehicle_18whlr_cab_decals_col (Diffuse)
+}
+Material: mtl_vehicle_18whlr_cab_rubber
+{
+	0: ~vehicle_18whlr_cab_spc-r18g1~853a1e41 (Spec)
+	1: vehicle_18whlr_cab_nml (Normal)
+	2: vehicle_18whlr_cab_col (Diffuse)
+}

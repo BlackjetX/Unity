@@ -1,0 +1,36 @@
+Material: mtl_vehicle_civilian_sedan_red_destroy_iw6_01
+{
+	0: ~vehicle_civilian_sedan_d_spc~32b36d8f (Spec)
+	1: vehicle_civilian_sedan_d_nml (Normal)
+	2: vehicle_civilian_sedan_d_col_02 (Diffuse)
+}
+Material: mtl_vehicle_civilian_sedan_tire_destroy_iw6
+{
+	0: ~vehicle_civilian_sedan_tire_~ced20383 (Spec)
+	1: vehicle_civilian_sedan_tire_d_nml (Normal)
+	2: vehicle_civilian_sedan_tire_d_col (Diffuse)
+}
+Material: mtl_vehicle_civilian_sedan_interior_destroy_iw6
+{
+	0: ~vehicle_civilian_sedan_inter~5ebb9d2a (Spec)
+	1: vehicle_civilian_sedan_interior_d_nml (Normal)
+	2: vehicle_civilian_sedan_interior_d_col (Diffuse)
+}
+Material: mtl_vehicle_civilian_sedan_glass_destroy_iw6
+{
+	0: ~vehicle_civilian_sedan_glass~101ad4ca (Spec)
+	1: vehicle_civilian_sedan_glass_d_nml (Normal)
+	2: vehicle_civilian_sedan_glass_d_col (Diffuse)
+}
+Material: mtl_vehicle_civilian_sedan_glass_inner_destroy_iw6
+{
+	0: ~vehicle_civilian_sedan_glass~101ad4ca (Spec)
+	1: vehicle_civilian_sedan_glass_d_nml (Normal)
+	2: vehicle_civilian_sedan_glass_d_col (Diffuse)
+}
+Material: mtl_vehicle_civilian_sedan_tire_metal_destroy_iw6
+{
+	0: ~vehicle_civilian_sedan_tire_~ced20383 (Spec)
+	1: vehicle_civilian_sedan_tire_d_nml (Normal)
+	2: vehicle_civilian_sedan_tire_d_col (Diffuse)
+}

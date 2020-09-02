@@ -1,0 +1,12 @@
+Material: mtl_bulldozer
+{
+	0: ~bulldozer_spc-rgb&bulldozer_cos-l-67 (Spec)
+	1: bulldozer_nml (Normal)
+	2: bulldozer_col (Diffuse)
+}
+Material: mtl_bulldozer_tread
+{
+	0: ~bulldozer_tread_spc-rgb&bull~662a4e45 (Spec)
+	1: bulldozer_tread_nml (Normal)
+	2: bulldozer_tread_col (Diffuse)
+}

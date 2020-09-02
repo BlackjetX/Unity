@@ -1,0 +1,16 @@
+newmtl mtl_vehicle_apache_iw6_blades
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl mtl_vehicle_aas_72x
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl mtl_vehicle_apache_iw6_blades_alpha
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl mtl_vehicle_aas_72x_glass
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0

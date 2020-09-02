@@ -1,0 +1,76 @@
+newmtl saf_c17_aircraft_metal_01
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl saf_c17_glass_opaque
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl saf_brushedmetal_01
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl saf_c17_graphics
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl saf_c17_aircraft_metal_01_dec
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl lightcard_omni_red
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl lightcard_omni_white
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl saf_c17_interior_plastic_02
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl mtl_saf_c17_light_panel
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl mtl_saf_c17_light
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl saf_c17_yellow_pipe
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl saf_c17_ceiling_01
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl saf_c17_ceiling_01_yellow
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl black_ice_metal_beam_distant
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl saf_c17_interior_plastic_01
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl hjk_cargo_floor_02
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl hjk_cargo_floor_01
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl fah_vista_metal_clean_panel_01
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl saf_metal_gray_01
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0

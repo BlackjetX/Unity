@@ -1,0 +1,28 @@
+Material: mtl_vehicle_apache_iw6_2sided
+{
+	0: ~vehicle_apache_iw6_spc-rgb&v~bdcebb6a (Spec)
+	1: vehicle_apache_iw6_nml (Normal)
+	2: vehicle_apache_iw6_col (Diffuse)
+}
+Material: mtl_vehicle_apache_iw6_interior
+{
+	0: ~vehicle_apache_iw6_interior_~89d9d7ab (Spec)
+	1: $identitynormalmap (Normal)
+	2: vehicle_apache_iw6_interior_col (Diffuse)
+}
+Material: mtl_vehicle_apache_iw6_interior_add
+{
+	0: vehicle_apache_iw6_interior_col (Diffuse)
+}
+Material: mtl_vehicle_apache_iw6_blades_alpha
+{
+	0: ~vehicle_apache_iw6_blades_sp~dcc672b0 (Spec)
+	1: $identitynormalmap (Normal)
+	2: vehicle_apache_iw6_blades_col (Diffuse)
+}
+Material: mtl_vehicle_apache_iw6_blades
+{
+	0: ~vehicle_apache_iw6_blades_sp~dcc672b0 (Spec)
+	1: $identitynormalmap (Normal)
+	2: vehicle_apache_iw6_blades_col (Diffuse)
+}

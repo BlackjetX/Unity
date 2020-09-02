@@ -1,0 +1,6 @@
+Material: mtl_vehicle_battle_hind
+{
+	0: ~vehicle_battle_hind_spc-rgb&~18fb6cf1 (Spec)
+	1: vehicle_battle_hind_nml (Normal)
+	2: vehicle_battle_hind_col_blendy (Diffuse)
+}

@@ -1,0 +1,20 @@
+newmtl mtl_bm_21_glass
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl mtl_bm_21_truck_tires
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl mtl_bm_21_truck_base
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl mtl_bm_21_truck_bed
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0
+newmtl mtl_bm_21_truck_cover
+Kd 1.0000 1.0000 1.0000
+Ns 1
+illum 0

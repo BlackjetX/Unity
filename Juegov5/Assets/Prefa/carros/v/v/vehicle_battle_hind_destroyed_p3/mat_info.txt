@@ -1,0 +1,5 @@
+Material: mtl_vehicle_battle_hind_2sided
+{
+	0: $identitynormalmap (Normal)
+	1: vehicle_battle_hind_col (Diffuse)
+}

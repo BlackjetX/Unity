@@ -1,0 +1,11 @@
+Material: mtl_80s_econdestroy_brn
+{
+	0: ~80s_econdestroy_spc-rgb&80s_~388837a8 (Spec)
+	1: 80s_econdestroy_nml (Normal)
+	2: 80s_econdestroy_brn_col (Diffuse)
+}
+Material: mtl_engine
+{
+	0: car_engine_nml (Normal)
+	1: car_engine_col (Diffuse)
+}

@@ -1,0 +1,24 @@
+Material: mtl_factory_vehicle_train_flatbed_02
+{
+	0: ~mtl_factory_train_flatbed_02~e4e85d6f (Spec)
+	1: mtl_factory_train_flatbed_02_nml (Normal)
+	2: mtl_factory_train_flatbed_02_col (Diffuse)
+}
+Material: mtl_factory_vehicle_train_flatbed_02_top
+{
+	0: ~mtl_factory_train_flatbed_02~02abd833 (Spec)
+	1: mtl_factory_train_flatbed_02_top_nml (Normal)
+	2: mtl_factory_train_flatbed_02_top_col (Diffuse)
+}
+Material: mtl_trainwheel01_col
+{
+	0: ~trainwheel01_spc-rgb&trainwh~b040dcd1 (Spec)
+	1: trainwheel01_nml (Normal)
+	2: trainwheel01_col (Diffuse)
+}
+Material: mtl_factory_train_coupler_01
+{
+	0: ~mtl_factory_train_coupler_sp~1ee7f6d5 (Spec)
+	1: mtl_factory_train_coupler_nml (Normal)
+	2: mtl_factory_train_coupler_col (Diffuse)
+}

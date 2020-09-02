@@ -1,0 +1,12 @@
+Material: mtl_brave_warrior
+{
+	0: ~vehicle_china_brave_warrior_~f0c06eff (Spec)
+	1: vehicle_china_brave_warrior_nml (Normal)
+	2: vehicle_china_brave_warrior_col (Diffuse)
+}
+Material: mtl_brave_warrior_tires
+{
+	0: ~vehicle_china_brave_warrior_~99b7899b (Spec)
+	1: vehicle_china_brave_warrior_tire_nml (Normal)
+	2: vehicle_china_brave_warrior_tire_col (Diffuse)
+}

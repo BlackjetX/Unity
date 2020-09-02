@@ -1,0 +1,4 @@
+Material: gfx_car_light_round_white
+{
+	0: car_light_round_white (Diffuse)
+}

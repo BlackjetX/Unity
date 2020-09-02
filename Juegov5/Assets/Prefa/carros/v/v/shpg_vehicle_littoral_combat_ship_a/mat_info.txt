@@ -1,0 +1,6 @@
+Material: mtl_shpg_vehicle_littoral_combat_ship_a
+{
+	0: ~shpg_vehicle_littoral_cb_shi~28a1e818 (Spec)
+	1: $identitynormalmap (Normal)
+	2: shpg_vehicle_littoral_cb_ship_a_col (Diffuse)
+}

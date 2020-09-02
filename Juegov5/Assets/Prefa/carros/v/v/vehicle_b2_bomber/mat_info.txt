@@ -1,0 +1,6 @@
+Material: mtl_vehicle_b2_bomber
+{
+	0: ~vehicle_b2_bomber_spec-rgb&v~7a967361 (Spec)
+	1: $identitynormalmap (Normal)
+	2: vehicle_b2_bomber_col (Diffuse)
+}

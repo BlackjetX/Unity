@@ -1,0 +1,12 @@
+Material: mtl_vehicle_apache_iw5
+{
+	0: ~vehicle_apache_iw5_spc-r18g1~972e15f4 (Spec)
+	1: vehicle_apache_iw5_nml (Normal)
+	2: vehicle_apache_iw5_col (Diffuse)
+}
+Material: mtl_vehicle_apache_wing_iw5
+{
+	0: ~vehicle_apache_wing_iw5_spc-~3e74357f (Spec)
+	1: vehicle_apache_wing_iw5_nml (Normal)
+	2: vehicle_apache_wing_iw5_col (Diffuse)
+}
