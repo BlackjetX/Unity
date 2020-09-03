@@ -13,7 +13,7 @@ public class PlayerManos : MonoBehaviour
     public GameObject Impactob;
     public GameObject SonidoLacer;
     public GameObject destello;
-   
+    public GameObject MuerteCabeza1;
 
 
     int Rabia;
@@ -28,7 +28,7 @@ public class PlayerManos : MonoBehaviour
     {
         this.Rabia = 0;
         this.animaciones = this.GetComponent<Animation>();
-        CrearEnemigos(15);
+        CrearEnemigos(100);
         MedidorRabia(0);
 
     }
@@ -116,6 +116,13 @@ public class PlayerManos : MonoBehaviour
                 hit.collider.gameObject.GetComponent<HeadsShot>().Head();
                 MedidorRabia(500);
                 print("golpe a la cabeza");
+
+                //saca mensaje
+                GameObject impactMuerteCabezaB = Instantiate(this.MuerteCabeza1, this.MuerteCabeza1.transform.position, this.MuerteCabeza1.transform.rotation);
+                impactMuerteCabezaB.SetActive(true);
+                Destroy(impactMuerteCabezaB, 0.9f);
+               
+
             }
             else {
                 GameObject impactoTemp = Instantiate(this.Impactoa, hit.point + hit.normal * 0.001f, Quaternion.LookRotation(hit.normal));
