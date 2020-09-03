@@ -10,8 +10,11 @@ public class PlayerManos : MonoBehaviour
     public Camera Cam;
     public RaycastHit hit;
     public GameObject Impactoa;
+    public GameObject Impactob;
     public GameObject SonidoLacer;
     public GameObject destello;
+   
+
 
     int Rabia;
     
@@ -87,40 +90,39 @@ public class PlayerManos : MonoBehaviour
     } */
     public void Disparar()
     {
+        Sonido(this.SonidoLacer.GetComponent<AudioSource>());
+        GameObject temp2 = Instantiate(this.destello, this.destello.transform.position, destello.transform.rotation);
+        temp2.SetActive(true);
+        Destroy(temp2, 0.065f);
+
         if (Physics.Raycast(this.Cam.transform.position, this.Cam.transform.forward, out hit, 1000f))
         {
-            //print(hit.collider);
-            Sonido(this.SonidoLacer.GetComponent<AudioSource>());
-            GameObject impactoTemp = Instantiate(this.Impactoa, hit.point + hit.normal * 0.001f, Quaternion.LookRotation(hit.normal));
-            impactoTemp.SetActive(true);
-
-            //GameObject enemigottt = Instantiate(this.enemigoTemporal, hit.point + hit.normal * 0.001f, Quaternion.LookRotation(hit.normal));
-            //enemigottt.SetActive(true);
-
-            GameObject temp2 = Instantiate(this.destello, this.destello.transform.position, destello.transform.rotation);
-            temp2.SetActive(true);
-            Destroy(temp2,0.2f);
-
-            Destroy(impactoTemp, 0.5f);
-            
-            if(hit.collider.gameObject.name== "walking")
-            {   
-                hit.collider.gameObject.GetComponent<Enemigo>().Muerte(5);
-                MedidorRabia(200);
-                print("golpe al cuerpo");
-            }
-            if (hit.collider.gameObject.name == "walking(Clone)")
+           
+        if(hit.collider.gameObject.name == "Cuerpo")
             {
-                hit.collider.gameObject.GetComponent<Enemigo>().Muerte(5);
-                MedidorRabia(200);
+                GameObject impactoTemp = Instantiate(this.Impactob, hit.point + hit.normal * 0.001f, Quaternion.LookRotation(hit.normal));
+                impactoTemp.SetActive(true);
+                Destroy(impactoTemp, 0.5f);
+                hit.collider.gameObject.GetComponent<CuerpoS>().Cuerpo();
+                MedidorRabia(15);
                 print("golpe al cuerpo");
             }
+            
             if (hit.collider.gameObject.name == "Cabeza")
             {
+                GameObject impactoTempB = Instantiate(this.Impactob, hit.point + hit.normal * 0.001f, Quaternion.LookRotation(hit.normal));
+                impactoTempB.SetActive(true);
+                Destroy(impactoTempB, 0.5f);
                 hit.collider.gameObject.GetComponent<HeadsShot>().Head();
                 MedidorRabia(500);
-                print("golpe al cuerpo");
+                print("golpe a la cabeza");
             }
+            else {
+                GameObject impactoTemp = Instantiate(this.Impactoa, hit.point + hit.normal * 0.001f, Quaternion.LookRotation(hit.normal));
+                impactoTemp.SetActive(true);
+                Destroy(impactoTemp, 0.5f);
+            }
+            
         }
     }
 

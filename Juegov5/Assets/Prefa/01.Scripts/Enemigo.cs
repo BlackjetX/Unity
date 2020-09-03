@@ -15,7 +15,7 @@ public class Enemigo : MonoBehaviour
 
     public bool Obstaculo;
     public int impato;
-
+   
     public GameObject enemigoTemporal;
     public RaycastHit hit;
 
@@ -140,7 +140,7 @@ public class Enemigo : MonoBehaviour
         impato++;
         if (impato == 5) { 
         this.GetComponent<Animator>().SetInteger("Dead",1);
-        Destroy(this.gameObject, 6f);
+        Destroy(this.gameObject, 0f);
         print("me mataron");
         }
         if(Muerte==5)
