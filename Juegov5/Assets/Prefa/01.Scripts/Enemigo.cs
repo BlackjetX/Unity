@@ -146,7 +146,7 @@ public class Enemigo : MonoBehaviour
         if(Muerte==5)
         {
             this.GetComponent<Animator>().SetInteger("Dead", 1);
-            Destroy(this.gameObject, 6f);
+            Destroy(this.gameObject, 0f);
         }
     }
 

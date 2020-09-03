@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
-
+using UnityEngine.UI;
 public class PlayerManos : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -13,7 +13,9 @@ public class PlayerManos : MonoBehaviour
     public GameObject SonidoLacer;
     public GameObject destello;
 
-
+    int Rabia;
+    
+    public Text puntaje;
     Vector3 inicial;
     Vector3 suma;
 
@@ -21,15 +23,23 @@ public class PlayerManos : MonoBehaviour
     public GameObject enemigoTemporal;
     void Start()
     {
+        this.Rabia = 0;
         this.animaciones = this.GetComponent<Animation>();
         CrearEnemigos(15);
+        MedidorRabia(0);
 
-
+    }
+    void MedidorRabia(int puntos) {
+        this.Rabia += puntos;
+        puntaje.text = "Rabia: "+ Rabia;
+        print("me actualice");
     }
 
     // Update is called once per frame
     void Update()
     {
+       
+
         if(!Input.anyKey)
         {
             this.animaciones.CrossFade("Idle");
@@ -59,31 +69,33 @@ public class PlayerManos : MonoBehaviour
                     }
                 }
             }
-            if (Input.GetKeyDown(KeyCode.Alpha1))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                Magia();
+               // Magia();
             }
         }
      
     }
 
-    public void Magia()
+    
+
+   /* public void Magia()
     {
         //GameObject.Find("Cyclone").GetComponent<ParticleSystem>().Play();
         GameObject.Find("Meteor Storm").GetComponent<ParticleSystem>().Play();
         
-    }
+    } */
     public void Disparar()
     {
         if (Physics.Raycast(this.Cam.transform.position, this.Cam.transform.forward, out hit, 1000f))
         {
-            print(hit.collider);
+            //print(hit.collider);
             Sonido(this.SonidoLacer.GetComponent<AudioSource>());
             GameObject impactoTemp = Instantiate(this.Impactoa, hit.point + hit.normal * 0.001f, Quaternion.LookRotation(hit.normal));
             impactoTemp.SetActive(true);
 
-            GameObject enemigottt = Instantiate(this.enemigoTemporal, hit.point + hit.normal * 0.001f, Quaternion.LookRotation(hit.normal));
-            enemigottt.SetActive(true);
+            //GameObject enemigottt = Instantiate(this.enemigoTemporal, hit.point + hit.normal * 0.001f, Quaternion.LookRotation(hit.normal));
+            //enemigottt.SetActive(true);
 
             GameObject temp2 = Instantiate(this.destello, this.destello.transform.position, destello.transform.rotation);
             temp2.SetActive(true);
@@ -91,13 +103,23 @@ public class PlayerManos : MonoBehaviour
 
             Destroy(impactoTemp, 0.5f);
             
-            if(hit.collider.gameObject.name=="Walking")
+            if(hit.collider.gameObject.name== "walking")
+            {   
+                hit.collider.gameObject.GetComponent<Enemigo>().Muerte(5);
+                MedidorRabia(200);
+                print("golpe al cuerpo");
+            }
+            if (hit.collider.gameObject.name == "walking(Clone)")
             {
-                hit.collider.gameObject.GetComponent<Enemigo>().Muerte(0);
+                hit.collider.gameObject.GetComponent<Enemigo>().Muerte(5);
+                MedidorRabia(200);
+                print("golpe al cuerpo");
             }
             if (hit.collider.gameObject.name == "Cabeza")
             {
                 hit.collider.gameObject.GetComponent<HeadsShot>().Head();
+                MedidorRabia(500);
+                print("golpe al cuerpo");
             }
         }
     }
