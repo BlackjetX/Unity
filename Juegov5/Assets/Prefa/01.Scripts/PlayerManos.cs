@@ -13,6 +13,7 @@ public class PlayerManos : MonoBehaviour
     public GameObject Impactob;
     public GameObject SonidoLacer;
     public GameObject SonidoFondo;
+    public GameObject SonidoHeadShot;
     public GameObject destello;
     public GameObject MuerteCabeza1;
     public Text Balas;
@@ -211,7 +212,8 @@ public class PlayerManos : MonoBehaviour
                 GameObject impactMuerteCabezaB = Instantiate(this.MuerteCabeza1, this.MuerteCabeza1.transform.position, this.MuerteCabeza1.transform.rotation);
                 impactMuerteCabezaB.SetActive(true);
                 Destroy(impactMuerteCabezaB, 0.9f);
-               
+                //sonido
+                Sonido(this.SonidoHeadShot.GetComponent<AudioSource>());
 
             }
             else {
