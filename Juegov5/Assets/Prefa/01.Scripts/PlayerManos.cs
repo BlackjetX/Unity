@@ -12,13 +12,16 @@ public class PlayerManos : MonoBehaviour
     public GameObject Impactoa;
     public GameObject Impactob;
     public GameObject SonidoLacer;
+    public GameObject SonidoFondo;
     public GameObject destello;
     public GameObject MuerteCabeza1;
-
-
+    public Text Balas;
+    public Text puntaje;
+    int balasCargador;
+    int balasReserva;
     int Rabia;
     
-    public Text puntaje;
+    
     Vector3 inicial;
     Vector3 suma;
 
@@ -26,10 +29,81 @@ public class PlayerManos : MonoBehaviour
     public GameObject enemigoTemporal;
     void Start()
     {
+        Sonido(this.SonidoFondo.GetComponent<AudioSource>());
+        this.balasCargador = 30;
+        this.balasReserva = 210;
         this.Rabia = 0;
         this.animaciones = this.GetComponent<Animation>();
         CrearEnemigos(100);
+        Balas.text = "Balas: " + balasCargador + "/" + balasReserva;
+        puntaje.text = "Rabia: " + Rabia;
+        controladorBalas("");
         MedidorRabia(0);
+
+    }
+
+    void controladorBalas(string modificacionBalas) {
+
+        if (modificacionBalas == "disparo")
+        {
+            this.balasCargador--;
+            Balas.text = "Balas: " + balasCargador + "/" + balasReserva;
+        }
+        else if (modificacionBalas == "municion")
+        {
+            if (this.balasReserva + 30 <= 210)
+            {
+                this.balasReserva += 30;
+                Balas.text = "Balas: " + balasCargador + "/" + balasReserva;
+            }
+            else
+            {
+                this.balasReserva = 210;
+                Balas.text = "Balas: " + balasCargador + "/" + balasReserva;
+            }
+        }
+        else if (modificacionBalas == "recargaManual")
+        {
+            if (this.balasReserva > 0)
+            {
+                print("reload");
+                int recarga = 30-this.balasCargador ;
+                this.balasCargador += recarga;
+                this.balasReserva -= recarga;
+                Balas.text = "Balas: " + balasCargador + "/" + balasReserva;
+
+            }
+            else if (this.balasReserva <= 0)
+            {
+
+            }
+
+        }
+        else if (modificacionBalas == "recargaAuto") {
+            print("se recarga aunotmaticamente");
+            print("las balas de reserva son" + this.balasReserva);
+            if (this.balasReserva >= 30)
+            {
+                this.balasCargador = 30;
+                this.balasReserva -= 30;
+
+            }
+            else if (this.balasReserva <= 30 && this.balasCargador > 0)
+            {
+                this.balasCargador = this.balasReserva;
+                this.balasReserva = 0;
+
+            }
+            else if (this.balasReserva <= 0) {
+                print("se acabaron las balas");
+            }
+        }
+        else
+        {
+            Balas.text = "Balas: " + balasCargador + "/" + balasReserva;
+        }
+
+        
 
     }
     void MedidorRabia(int puntos) {
@@ -55,8 +129,19 @@ public class PlayerManos : MonoBehaviour
                 {
                     return;
                 }
+                
                 this.animaciones.CrossFade("SMG_fire1shot");
-                Disparar();
+                
+                if (this.balasCargador > 0)
+                {
+                    Disparar();
+                    controladorBalas("disparo");
+                
+                }
+                else if (this.balasCargador <= 0) {
+                    controladorBalas("recargaAuto");                
+                }
+                
             }
             else
             {
@@ -72,10 +157,15 @@ public class PlayerManos : MonoBehaviour
                     }
                 }
             }
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.F))
             {
+                print("la magia");
                // Magia();
             }
+            if (Input.GetKeyDown(KeyCode.R)) {
+                print("la recargacion");
+                controladorBalas("recargaManual");
+            }   
         }
      
     }
