@@ -16,7 +16,6 @@ public class PlayerManos : MonoBehaviour
     public GameObject Recarga;
     public GameObject SonidoHeadShot;
     public GameObject destello;
-
     public GameObject MuerteCabeza1;
     public Text Balas;
     public Text puntaje;
@@ -24,14 +23,18 @@ public class PlayerManos : MonoBehaviour
     int balasReserva;
     int Rabia;
 
-    //para la municion
 
+    //para la municion
     public GameObject caja1;
     public GameObject caja2;
     public GameObject caja3;
+    //control hordas
+    int enemigosSersenados;
+    int EstadoHorda;
 
-    public GameObject Municion;
-    public GameObject FirsPerson;//este tiene el collider
+  
+    public GameObject FirsPerson;
+    //este tiene el collider
     //fin municion
     Vector3 inicial;
     Vector3 suma;
@@ -42,16 +45,19 @@ public class PlayerManos : MonoBehaviour
 
     void Start()
     {
+        enemigosSersenados =0;
+        EstadoHorda = 0;
         Sonido(this.SonidoFondo.GetComponent<AudioSource>());
         this.balasCargador = 30;
         this.balasReserva = 210;
         this.Rabia = 0;
         this.animaciones = this.GetComponent<Animation>();
-        CrearEnemigos(100);
         Balas.text = "Balas: " + balasCargador + "/" + balasReserva;
         puntaje.text = "Rabia: " + Rabia;
+        CrearEnemigos(150);
         controladorBalas("");
         MedidorRabia(0);
+
         
     }
   
@@ -75,51 +81,38 @@ public class PlayerManos : MonoBehaviour
                 Balas.text = "Balas: " + balasCargador + "/" + balasReserva;
             }
         }
-        else if (modificacionBalas == "recargaManual")
+        else if (modificacionBalas == "recarga")
         {
-            if (this.balasReserva > 0&&this.balasCargador<30)
-            {   
-                print("reload "+"las balas del cargador son "+this.balasCargador);
+            if (this.balasReserva > 0 && this.balasCargador < 30)
+            {
+                print("reload " + "las balas del cargador son " + this.balasCargador);
                 Sonido(this.Recarga.GetComponent<AudioSource>());
-                int recarga = 30-this.balasCargador ;
-                this.balasCargador += recarga;
-                this.balasReserva -= recarga;
+                int recarga = 30 - this.balasCargador;
+                if (this.balasReserva - recarga < 0)
+                {
+                    print("en la reserva hay" + this.balasReserva);
+                    this.balasCargador += this.balasReserva;
+
+                    this.balasReserva = 0;
+                }
+                else {
+                    this.balasCargador += recarga;
+                    this.balasReserva -= recarga;
+                }
 
                 Balas.text = "Balas: " + balasCargador + "/" + balasReserva;
 
             }
+           
             else if (this.balasReserva <= 0)
             {
-
+                print("se agotaron las balas");
             }
 
         }
-        else if (modificacionBalas == "recargaAuto") {
-            print("se recarga aunotmaticamente");
-            print("las balas de reserva son" + this.balasReserva);
-            if (this.balasReserva >= 30)
-            {
-                Sonido(this.Recarga.GetComponent<AudioSource>());
-                this.balasCargador = 30;
-                this.balasReserva -= 30;
-
-            }
-            else if (this.balasReserva <= 30 && this.balasCargador > 0)
-            {
-                Sonido(this.Recarga.GetComponent<AudioSource>());
-
-                this.balasCargador = this.balasReserva;
-                this.balasReserva = 0;
-
-            }
-            else if (this.balasReserva <= 0) {
-                print("se acabaron las balas");
-            }
-        }
-        else
-        {
-            Balas.text = "Balas: " + balasCargador + "/" + balasReserva;
-        }
+       
+        
+        
 
         
 
@@ -135,6 +128,10 @@ public class PlayerManos : MonoBehaviour
     {
         //recogerMunicionm();
         recogerMunicionm();
+        //-------------**-----------//
+
+        //compruebo estado horda
+        //ControlHordas();
         if (!Input.anyKey)
         {
             this.animaciones.CrossFade("Idle");
@@ -157,7 +154,7 @@ public class PlayerManos : MonoBehaviour
                 
                 }
                 else if (this.balasCargador <= 0) {
-                    controladorBalas("recargaAuto");                
+                    controladorBalas("recarga");                
                 }
                 
             }
@@ -184,13 +181,37 @@ public class PlayerManos : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.R)) {
                 print("la recargacion");
-                controladorBalas("recargaManual");
+                controladorBalas("recarga");
             }   
         }
      
     }
 
-    
+    public void ControlHordas() {
+
+        if (this.enemigosSersenados == 0)
+        {
+            CrearEnemigos(36);
+            print("cree enemigos");
+            this.enemigosSersenados++;
+
+        }
+        else if (this.enemigosSersenados == 5)
+        {
+            CrearEnemigos(19);
+            print("cree enemigos");
+            this.enemigosSersenados++;
+        }
+        else if (this.enemigosSersenados == 15) {
+            CrearEnemigos(35);
+            print("cree enemigos");
+            this.enemigosSersenados++;
+        } else if (this.enemigosSersenados == 30) {
+            CrearEnemigos(36);
+            print("cree enemigos");
+            this.enemigosSersenados++;
+        }
+    }
 
    /* public void Magia()
     {
@@ -215,6 +236,7 @@ public class PlayerManos : MonoBehaviour
                 Destroy(impactoTemp, 0.5f);
                 hit.collider.gameObject.GetComponent<CuerpoS>().Cuerpo();
                 MedidorRabia(15);
+                
                 print("golpe al cuerpo");
             }
             
@@ -224,7 +246,8 @@ public class PlayerManos : MonoBehaviour
                 impactoTempB.SetActive(true);
                 Destroy(impactoTempB, 0.5f);
                 hit.collider.gameObject.GetComponent<HeadsShot>().Head();
-                MedidorRabia(500);
+                MedidorRabia(50);
+                
                 print("golpe a la cabeza");
 
                 //saca mensaje
@@ -271,45 +294,44 @@ public class PlayerManos : MonoBehaviour
             GameObject enemigottt = Instantiate(this.enemigoTemporal, inicial + suma, this.enemigoTemporal.transform.rotation);
             enemigottt.SetActive(true);
         }
-        for (int i = 0; i < 0; i++) {
-            this.suma = new Vector3((float)(Random.Range(-9.0f, 16.0f)), (float)0, (float)(Random.Range(10.0f, 300.0f)));
-            this.inicial = this.Municion.transform.position;
-            GameObject municiones = Instantiate(this.Municion, inicial + suma, this.Municion.transform.rotation);
-            municiones.SetActive(true);
-        }
+        
     }
     void recogerMunicionm()
     {
-        Debug.DrawLine(this.transform.position, this.Municion.transform.position,Color.blue);
+
         RaycastHit ray;
         if (Physics.Raycast(this.FirsPerson.transform.position, this.FirsPerson.transform.forward, out ray, 20f))
         {
-            print("***********************"+ray.collider.gameObject.name);
-
-            if (ray.collider.gameObject.name == "AmmoBox")
+            if (ray.collider.gameObject.CompareTag("ammo"))
             {
-                //ray.collider.gameObject.GetComponent<DestruirMunicion>().DestruirMunicionMetodo();
-                caja1.gameObject.GetComponent<DestruirMunicion>().DestruirMunicionMetodo();
-                Destroy(caja1.gameObject, 0f);
-                controladorBalas("25");
-               
+                if (Input.GetKey(KeyCode.F)) {
+                    print("destruire caja 1");
+                    controladorBalas("municion");
+                    Destroy(caja1.gameObject, 0f);
+                }
             }
-            if (ray.collider.gameObject.name == "AmmoBox2")
+            if (ray.collider.gameObject.CompareTag("ammo1"))
             {
-                //ray.collider.gameObject.GetComponent<DestruirMunicion>().DestruirMunicionMetodo();
-                caja2.gameObject.GetComponent<DestruirMunicion>().DestruirMunicionMetodo();
-                Destroy(caja2.gameObject, 0f);
-                controladorBalas("25");
 
-            }
-
-            if (ray.collider.gameObject.name == "AmmoBox3")
-            {
-                caja3.gameObject.GetComponent<DestruirMunicion>().DestruirMunicionMetodo();
-                Destroy(caja3.gameObject, 0f);
-                controladorBalas("25");
+                if (Input.GetKey(KeyCode.F))
+                {
+                    print("destruire caja 2");
+                    controladorBalas("municion");
+                    Destroy(caja2.gameObject, 0f);
+                }
 
             }
+            if (ray.collider.gameObject.CompareTag("ammo2"))
+            {
+                if (Input.GetKey(KeyCode.F))
+                {
+                    print("destruire caja 3");
+                    controladorBalas("municion");
+                    Destroy(caja3.gameObject, 0f);
+                }
+
+            }
+
         }
     }
 
