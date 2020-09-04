@@ -31,6 +31,15 @@ public class Vida : MonoBehaviour
                 SceneManager.LoadScene("MainMenu");
             }
         }
+        if(other.name=="AmmoBox")
+        {
+
+            //other.gameObject.GetComponent<DestruirMunicion>().DestruirMunicionMetodo();
+            //Destroy(other, 0f);
+            print("Recoge municion");
+        }
+
+        print("name "+ other.name);
     }
 
     // Update is called once per frame
