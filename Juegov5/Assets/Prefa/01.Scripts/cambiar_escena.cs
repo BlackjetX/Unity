@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class cambiar_escena : MonoBehaviour
 {
-    public GameObject sonidos;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,29 +17,29 @@ public class cambiar_escena : MonoBehaviour
         
     }
 
-    public void jugar(){
-        //GetComponents<AudioSource>()[0].Play();
-        this.sonidos.GetComponents<AudioSource>()[1].Play();
-        SceneManager.LoadScene("nivel1");
+    public void play(){
+        this.GetComponents<AudioSource>()[1].Play();
+        SceneManager.LoadScene("nivel2");
     }
 
-    public void creditos(){
-        //reproducirSonido(GetComponents<AudioSource>()[0]);
-        //GetComponents<AudioSource>()[0].Play();
-        this.sonidos.GetComponents<AudioSource>()[1].Play();
-        SceneManager.LoadScene("creditos");
+    public void about(){
+        this.GetComponents<AudioSource>()[1].Play();
+        SceneManager.LoadScene("about");
     }
 
-    public void inicio(){
-        //reproducirSonido(GetComponents<AudioSource>()[0]);
-        //GetComponents<AudioSource>()[0].Play();
-        this.sonidos.GetComponents<AudioSource>()[1].Play();
-        SceneManager.LoadScene("inicio");
+    public void mainmenu(){
+        this.GetComponents<AudioSource>()[1].Play();
+        SceneManager.LoadScene("MainMenu");
     }
 
-    void reproducirSonido(AudioSource sonido){
+    public void howtoplay(){
+        this.GetComponents<AudioSource>()[1].Play();
+        SceneManager.LoadScene("howtoplay");
+    }
+
+    /*void reproducirSonido(AudioSource sonido){
         if(!sonido.isPlaying){
             sonido.Play();
         }
-    }
+    }*/
 }
