@@ -26,6 +26,10 @@ public class PlayerManos : MonoBehaviour
 
     //para la municion
 
+    public GameObject caja1;
+    public GameObject caja2;
+    public GameObject caja3;
+
     public GameObject Municion;
     public GameObject FirsPerson;//este tiene el collider
     //fin municion
@@ -267,7 +271,7 @@ public class PlayerManos : MonoBehaviour
             GameObject enemigottt = Instantiate(this.enemigoTemporal, inicial + suma, this.enemigoTemporal.transform.rotation);
             enemigottt.SetActive(true);
         }
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 0; i++) {
             this.suma = new Vector3((float)(Random.Range(-9.0f, 16.0f)), (float)0, (float)(Random.Range(10.0f, 300.0f)));
             this.inicial = this.Municion.transform.position;
             GameObject municiones = Instantiate(this.Municion, inicial + suma, this.Municion.transform.rotation);
@@ -277,18 +281,36 @@ public class PlayerManos : MonoBehaviour
     void recogerMunicionm()
     {
         Debug.DrawLine(this.transform.position, this.Municion.transform.position,Color.blue);
-        /*RaycastHit ray;
+        RaycastHit ray;
         if (Physics.Raycast(this.FirsPerson.transform.position, this.FirsPerson.transform.forward, out ray, 20f))
         {
-            print(ray.collider.gameObject.name);
+            print("***********************"+ray.collider.gameObject.name);
 
             if (ray.collider.gameObject.name == "AmmoBox")
             {
-                ray.collider.gameObject.GetComponent<DestruirMunicion>().DestruirMunicionMetodo();
-                MedidorRabia(15);
-                print("golpe al cuerpo");
+                //ray.collider.gameObject.GetComponent<DestruirMunicion>().DestruirMunicionMetodo();
+                caja1.gameObject.GetComponent<DestruirMunicion>().DestruirMunicionMetodo();
+                Destroy(caja1.gameObject, 0f);
+                controladorBalas("25");
+               
             }
-        }*/
+            if (ray.collider.gameObject.name == "AmmoBox2")
+            {
+                //ray.collider.gameObject.GetComponent<DestruirMunicion>().DestruirMunicionMetodo();
+                caja2.gameObject.GetComponent<DestruirMunicion>().DestruirMunicionMetodo();
+                Destroy(caja2.gameObject, 0f);
+                controladorBalas("25");
+
+            }
+
+            if (ray.collider.gameObject.name == "AmmoBox3")
+            {
+                caja3.gameObject.GetComponent<DestruirMunicion>().DestruirMunicionMetodo();
+                Destroy(caja3.gameObject, 0f);
+                controladorBalas("25");
+
+            }
+        }
     }
 
 
