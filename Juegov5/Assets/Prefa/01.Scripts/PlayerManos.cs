@@ -46,23 +46,7 @@ public class PlayerManos : MonoBehaviour
         MedidorRabia(0);
         
     }
-    void recogerMunicionm() {
-        RaycastHit ray;
-        if (Physics.Raycast(this.Cam.transform.position, this.Cam.transform.forward, out ray, 1.5f)) {
-            if (ray.collider.gameObject.CompareTag("ammo")) {
-                print("toco municion");
-                controladorBalas("municion");
-                Destroy(Municion); 
-                
-            }
-            if (ray.collider.gameObject.CompareTag("ammo"))
-            {
-                print("toco municion");
-                controladorBalas("municion");
-                Destroy(Municion);
-            }
-        }
-    }
+  
     void controladorBalas(string modificacionBalas) {
 
         if (modificacionBalas == "disparo")
@@ -141,9 +125,9 @@ public class PlayerManos : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        //recogerMunicionm();
 
-        if(!Input.anyKey)
+        if (!Input.anyKey)
         {
             this.animaciones.CrossFade("Idle");
         }
@@ -173,7 +157,7 @@ public class PlayerManos : MonoBehaviour
             {
                 if(Input.GetKey(KeyCode.W)|| Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.S))
                 {
-                    recogerMunicionm();
+                    
                     
                     if(!Input.GetKey(KeyCode.LeftShift))
                     {
@@ -286,5 +270,26 @@ public class PlayerManos : MonoBehaviour
             municiones.SetActive(true);
         }
     }
+    void recogerMunicionm()
+    {
+        RaycastHit ray;
+        if (Physics.Raycast(this.Cam.transform.position, this.Cam.transform.forward, out ray, 1.5f))
+        {
+            if (ray.collider.gameObject.CompareTag("ammo"))
+            {
+                print("toco municion");
+                controladorBalas("municion");
+                Destroy(Municion);
+
+            }
+           /* if (ray.collider.gameObject.name == "ammo(Clone)")
+            {
+                print("toco municion");
+                controladorBalas("municion");
+                Destroy(Municion);
+            }*/
+        }
+    }
+
 
 }
