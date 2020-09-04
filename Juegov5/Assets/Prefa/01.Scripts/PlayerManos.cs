@@ -16,15 +16,19 @@ public class PlayerManos : MonoBehaviour
     public GameObject Recarga;
     public GameObject SonidoHeadShot;
     public GameObject destello;
-    public GameObject Municion;
+
     public GameObject MuerteCabeza1;
     public Text Balas;
     public Text puntaje;
     int balasCargador;
     int balasReserva;
     int Rabia;
-    
-    
+
+    //para la municion
+
+    public GameObject Municion;
+    public GameObject FirsPerson;//este tiene el collider
+    //fin municion
     Vector3 inicial;
     Vector3 suma;
 
@@ -126,7 +130,7 @@ public class PlayerManos : MonoBehaviour
     void Update()
     {
         //recogerMunicionm();
-
+        recogerMunicionm();
         if (!Input.anyKey)
         {
             this.animaciones.CrossFade("Idle");
@@ -263,8 +267,8 @@ public class PlayerManos : MonoBehaviour
             GameObject enemigottt = Instantiate(this.enemigoTemporal, inicial + suma, this.enemigoTemporal.transform.rotation);
             enemigottt.SetActive(true);
         }
-        for (int i = 0; i < 3; i++) {
-            this.suma = new Vector3((float)(Random.Range(-9.0f, 16.0f)), (float)0, (float)(Random.Range(300.0f, 300.0f)));
+        for (int i = 0; i < 100; i++) {
+            this.suma = new Vector3((float)(Random.Range(-9.0f, 16.0f)), (float)0, (float)(Random.Range(10.0f, 300.0f)));
             this.inicial = this.Municion.transform.position;
             GameObject municiones = Instantiate(this.Municion, inicial + suma, this.Municion.transform.rotation);
             municiones.SetActive(true);
@@ -272,23 +276,19 @@ public class PlayerManos : MonoBehaviour
     }
     void recogerMunicionm()
     {
-        RaycastHit ray;
-        if (Physics.Raycast(this.Cam.transform.position, this.Cam.transform.forward, out ray, 1.5f))
+        Debug.DrawLine(this.transform.position, this.Municion.transform.position,Color.blue);
+        /*RaycastHit ray;
+        if (Physics.Raycast(this.FirsPerson.transform.position, this.FirsPerson.transform.forward, out ray, 20f))
         {
-            if (ray.collider.gameObject.CompareTag("ammo"))
-            {
-                print("toco municion");
-                controladorBalas("municion");
-                Destroy(Municion);
+            print(ray.collider.gameObject.name);
 
-            }
-           /* if (ray.collider.gameObject.name == "ammo(Clone)")
+            if (ray.collider.gameObject.name == "AmmoBox")
             {
-                print("toco municion");
-                controladorBalas("municion");
-                Destroy(Municion);
-            }*/
-        }
+                ray.collider.gameObject.GetComponent<DestruirMunicion>().DestruirMunicionMetodo();
+                MedidorRabia(15);
+                print("golpe al cuerpo");
+            }
+        }*/
     }
 
 

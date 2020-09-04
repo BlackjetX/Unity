@@ -16,7 +16,7 @@ public class R : MonoBehaviour
         if(other.name=="key")
         {
             other.GetComponent<AudioSource>().Play();
-            //print("colisiono " + other.name);
+            print("colisiono " + other.name);
             contador++;
             Destroy(other.transform.parent.gameObject,0.7f);
         }
