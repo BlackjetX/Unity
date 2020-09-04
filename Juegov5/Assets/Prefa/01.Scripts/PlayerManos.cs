@@ -52,6 +52,13 @@ public class PlayerManos : MonoBehaviour
             if (ray.collider.gameObject.CompareTag("ammo")) {
                 print("toco municion");
                 controladorBalas("municion");
+                Destroy(Municion); 
+                
+            }
+            if (ray.collider.gameObject.CompareTag("ammo"))
+            {
+                print("toco municion");
+                controladorBalas("municion");
                 Destroy(Municion);
             }
         }
