@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Vida : MonoBehaviour
 {
 
     // Start is called before the first frame update
     float salud;
+    public GameObject barraSangre;
+    public GameObject gameOver;
 
     void Start()
     {
@@ -15,14 +19,16 @@ public class Vida : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        print("bajar sangre");
-        if (other.name== "LeftHand")
+        
+        if ((other.name== "Cabeza")||((other.name== "Cuerpo")))
         {
-            print("bajar sangre");
-            this.salud=this.salud-0.2f;
+            //print("bajar sangre");
+            this.salud=this.salud-0.1f;
+            this.barraSangre.GetComponent<Image>().fillAmount=this.salud;
             if(this.salud<=0)
             {
-                print("Game Over");
+                this.gameOver.SetActive(true);
+                SceneManager.LoadScene("MainMenu");
             }
         }
     }
@@ -30,6 +36,6 @@ public class Vida : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
 }

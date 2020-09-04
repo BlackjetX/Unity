@@ -100,6 +100,7 @@ public class Enemigo : MonoBehaviour
         }
         else
         {
+            Animacion(1);
             Desplazar(this.inicial);
             if (this.Agente.remainingDistance < 2)
             {
