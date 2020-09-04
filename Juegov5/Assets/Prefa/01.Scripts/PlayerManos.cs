@@ -13,8 +13,10 @@ public class PlayerManos : MonoBehaviour
     public GameObject Impactob;
     public GameObject SonidoLacer;
     public GameObject SonidoFondo;
+    public GameObject Recarga;
     public GameObject SonidoHeadShot;
     public GameObject destello;
+    public GameObject Municion;
     public GameObject MuerteCabeza1;
     public Text Balas;
     public Text puntaje;
@@ -28,6 +30,8 @@ public class PlayerManos : MonoBehaviour
 
     //prueba
     public GameObject enemigoTemporal;
+    public GameObject cuerpojugador;
+
     void Start()
     {
         Sonido(this.SonidoFondo.GetComponent<AudioSource>());
@@ -40,9 +44,18 @@ public class PlayerManos : MonoBehaviour
         puntaje.text = "Rabia: " + Rabia;
         controladorBalas("");
         MedidorRabia(0);
-
+        
     }
-
+    void recogerMunicionm() {
+        RaycastHit ray;
+        if (Physics.Raycast(this.Cam.transform.position, this.Cam.transform.forward, out ray, 1.5f)) {
+            if (ray.collider.gameObject.CompareTag("ammo")) {
+                print("toco municion");
+                controladorBalas("municion");
+                Destroy(Municion);
+            }
+        }
+    }
     void controladorBalas(string modificacionBalas) {
 
         if (modificacionBalas == "disparo")
@@ -65,12 +78,14 @@ public class PlayerManos : MonoBehaviour
         }
         else if (modificacionBalas == "recargaManual")
         {
-            if (this.balasReserva > 0)
-            {
-                print("reload");
+            if (this.balasReserva > 0&&this.balasCargador<30)
+            {   
+                print("reload "+"las balas del cargador son "+this.balasCargador);
+                Sonido(this.Recarga.GetComponent<AudioSource>());
                 int recarga = 30-this.balasCargador ;
                 this.balasCargador += recarga;
                 this.balasReserva -= recarga;
+
                 Balas.text = "Balas: " + balasCargador + "/" + balasReserva;
 
             }
@@ -85,12 +100,15 @@ public class PlayerManos : MonoBehaviour
             print("las balas de reserva son" + this.balasReserva);
             if (this.balasReserva >= 30)
             {
+                Sonido(this.Recarga.GetComponent<AudioSource>());
                 this.balasCargador = 30;
                 this.balasReserva -= 30;
 
             }
             else if (this.balasReserva <= 30 && this.balasCargador > 0)
             {
+                Sonido(this.Recarga.GetComponent<AudioSource>());
+
                 this.balasCargador = this.balasReserva;
                 this.balasReserva = 0;
 
@@ -148,6 +166,8 @@ public class PlayerManos : MonoBehaviour
             {
                 if(Input.GetKey(KeyCode.W)|| Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.S))
                 {
+                    recogerMunicionm();
+                    
                     if(!Input.GetKey(KeyCode.LeftShift))
                     {
                         this.animaciones.CrossFade("Run");
@@ -251,6 +271,12 @@ public class PlayerManos : MonoBehaviour
             this.inicial = this.enemigoTemporal.transform.position;
             GameObject enemigottt = Instantiate(this.enemigoTemporal, inicial + suma, this.enemigoTemporal.transform.rotation);
             enemigottt.SetActive(true);
+        }
+        for (int i = 0; i < 3; i++) {
+            this.suma = new Vector3((float)(Random.Range(-9.0f, 16.0f)), (float)0, (float)(Random.Range(300.0f, 300.0f)));
+            this.inicial = this.Municion.transform.position;
+            GameObject municiones = Instantiate(this.Municion, inicial + suma, this.Municion.transform.rotation);
+            municiones.SetActive(true);
         }
     }
 

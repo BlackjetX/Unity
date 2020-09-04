@@ -139,7 +139,7 @@ public class Enemigo : MonoBehaviour
     {
         impato++;
         if (impato == 5) { 
-        this.GetComponent<Animator>().SetInteger("Dead",1);
+        //this.GetComponent<Animator>().SetInteger("Dead",1);
         Destroy(this.gameObject, 0f);
         print("me mataron");
         }
