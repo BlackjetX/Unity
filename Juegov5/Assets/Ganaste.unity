@@ -210,6 +210,7 @@ GameObject:
   - component: {fileID: 210059174}
   - component: {fileID: 210059176}
   - component: {fileID: 210059175}
+  - component: {fileID: 210059177}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -312,7 +313,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec1c2b5a084dbe14d9234674e3152d51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puntaje: {fileID: 2147378083}
 --- !u!82 &210059175
 AudioSource:
   m_ObjectHideFlags: 0
@@ -505,6 +505,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &210059177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210059169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b145e62e67062548bd25802b6e9ced2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puntaje: {fileID: 2147378083}
 --- !u!1 &594576050
 GameObject:
   m_ObjectHideFlags: 0
