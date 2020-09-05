@@ -30,8 +30,10 @@ public class PlayerManos : MonoBehaviour
     public GameObject caja3;
     //control hordas
     int enemigosSersenados;
+    public Text EnemigosSercenadosText;
     int EstadoHorda;
-
+    public GameObject TextoHorda;
+    public Text TextoHordaNumero;
   
     public GameObject FirsPerson;
     //este tiene el collider
@@ -59,6 +61,10 @@ public class PlayerManos : MonoBehaviour
         MedidorRabia(0);
 
         
+    }
+    public void sumarMuerteEnemigo()
+    {
+        this.enemigosSersenados += 1;
     }
   
     void controladorBalas(string modificacionBalas) {
@@ -131,7 +137,7 @@ public class PlayerManos : MonoBehaviour
         //-------------**-----------//
 
         //compruebo estado horda
-        //ControlHordas();
+        ControlHordas();
         if (!Input.anyKey)
         {
             this.animaciones.CrossFade("Idle");
@@ -189,27 +195,53 @@ public class PlayerManos : MonoBehaviour
 
     public void ControlHordas() {
 
+        EnemigosSercenadosText.text = "Zombies " +"\n   "+this.enemigosSersenados;
         if (this.enemigosSersenados == 0)
         {
             CrearEnemigos(36);
             print("cree enemigos");
             this.enemigosSersenados++;
+            //this.TextoHorda.SetActive(true);
+
+            GameObject HordaText = Instantiate(this.TextoHorda, this.TextoHorda.transform.position, this.TextoHorda.transform.rotation);
+            HordaText.SetActive(true);
+            Destroy(HordaText, 5.5f);
+           
+            
+
 
         }
         else if (this.enemigosSersenados == 5)
         {
+
+            this.TextoHordaNumero.text = "2";
             CrearEnemigos(19);
             print("cree enemigos");
             this.enemigosSersenados++;
+            GameObject HordaText = Instantiate(this.TextoHorda, this.TextoHorda.transform.position, this.TextoHorda.transform.rotation);
+            HordaText.SetActive(true);
+            Destroy(HordaText, 5.5f);
         }
         else if (this.enemigosSersenados == 15) {
+            this.TextoHordaNumero.text = "3";
             CrearEnemigos(35);
             print("cree enemigos");
             this.enemigosSersenados++;
+
+            GameObject HordaText = Instantiate(this.TextoHorda, this.TextoHorda.transform.position, this.TextoHorda.transform.rotation);
+            HordaText.SetActive(true);
+            Destroy(HordaText, 5.5f);
+
         } else if (this.enemigosSersenados == 30) {
+            this.TextoHordaNumero.text = "4";
             CrearEnemigos(36);
             print("cree enemigos");
             this.enemigosSersenados++;
+            GameObject HordaText = Instantiate(this.TextoHorda, this.TextoHorda.transform.position, this.TextoHorda.transform.rotation);
+            HordaText.SetActive(true);
+            Destroy(HordaText, 5.5f);
+
+
         }
     }
 
@@ -280,7 +312,7 @@ public class PlayerManos : MonoBehaviour
         //this.suma = new Vector3((float)160.1, (float)0.1, (float)0.1);
         //this.suma = new Vector3((float)16, (float)0, (float)0);
         for(int i = 0; i < CantZombie; i++) { 
-            this.suma = new Vector3((float)(Random.Range(-9.0f, 16.0f)), (float)0, (float)(Random.Range(0.0f, 300.0f)));
+            this.suma = new Vector3((float)(Random.Range(20.0f, 50.0f)), (float)0, (float)(Random.Range(-75.0f, 300.0f)));
             this.inicial = this.enemigoTemporal.transform.position;
             GameObject enemigottt = Instantiate(this.enemigoTemporal, inicial + suma, this.enemigoTemporal.transform.rotation);
             enemigottt.SetActive(true);
@@ -289,7 +321,7 @@ public class PlayerManos : MonoBehaviour
 
         for (int i = 0; i < (CantZombie/3); i++)
         {
-            this.suma = new Vector3((float)(Random.Range(-9.0f, 16.0f)), (float)0, (float)(Random.Range(300.0f, 300.0f)));
+            this.suma = new Vector3((float)(Random.Range(20.0f, 50.0f)), (float)0, (float)(Random.Range(200.0f, 300.0f)));
             this.inicial = this.enemigoTemporal.transform.position;
             GameObject enemigottt = Instantiate(this.enemigoTemporal, inicial + suma, this.enemigoTemporal.transform.rotation);
             enemigottt.SetActive(true);

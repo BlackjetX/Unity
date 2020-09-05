@@ -9,7 +9,7 @@ public class Enemigo : MonoBehaviour
 {
     NavMeshAgent Agente;
     public GameObject Objetivo;//a quien va a  perseguir
-
+    public GameObject manos;
     Vector3 inicial;
     Vector3 suma;
 
@@ -138,16 +138,21 @@ public class Enemigo : MonoBehaviour
 
     public void  Muerte(int Muerte)
     {
+        
         impato++;
-        if (impato == 5) { 
-        //this.GetComponent<Animator>().SetInteger("Dead",1);
-        Destroy(this.gameObject, 0f);
+        if (impato == 5) {
+            //this.GetComponent<Animator>().SetInteger("Dead",1);
+            this.manos.GetComponent<PlayerManos>().sumarMuerteEnemigo();
+            Destroy(this.gameObject, 0.06f);
         print("me mataron");
+            //this.Objetivo.gameObject.GetComponent<PlayerManos>().sumarMuerteEnemigo();
         }
         if(Muerte==5)
         {
+
+            this.manos.GetComponent<PlayerManos>().sumarMuerteEnemigo();
             this.GetComponent<Animator>().SetInteger("Dead", 1);
-            Destroy(this.gameObject, 0f);
+            Destroy(this.gameObject, 0.06f);
         }
     }
 
