@@ -51,6 +51,7 @@ public class PlayerManos : MonoBehaviour
 
     void Start()
     {
+        Screen.SetResolution(1366, 768, true);
         enemigosSersenados =0;
         //EstadoHorda = 0;
         Sonido(this.SonidoFondo.GetComponent<AudioSource>());
