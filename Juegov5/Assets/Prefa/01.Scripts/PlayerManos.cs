@@ -22,7 +22,7 @@ public class PlayerManos : MonoBehaviour
     int balasCargador;
     int balasReserva;
     int Rabia;
-
+    
 
     //para la municion
     public GameObject caja1;
@@ -60,7 +60,7 @@ public class PlayerManos : MonoBehaviour
         this.animaciones = this.GetComponent<Animation>();
         Balas.text = "Balas: " + balasCargador + "/" + balasReserva;
         puntaje.text = "Rabia: " + Rabia;
-        CrearEnemigos(150);
+        CrearEnemigos(80);
         controladorBalas("");
         MedidorRabia(0);
 
@@ -204,7 +204,7 @@ public class PlayerManos : MonoBehaviour
 
         {
             this.ControlNHorda1 = true;
-            CrearEnemigos(36);
+            CrearEnemigos(26);
             print("cree enemigos");
             GameObject HordaText = Instantiate(this.TextoHorda, this.TextoHorda.transform.position, this.TextoHorda.transform.rotation);
             HordaText.SetActive(true);
@@ -218,7 +218,7 @@ public class PlayerManos : MonoBehaviour
         {
 
   
-            CrearEnemigos(19);
+            CrearEnemigos(15);
             print("cree enemigos");
             this.ControlNHorda2=true;
             GameObject HordaText = Instantiate(this.TextoHorda, this.TextoHorda.transform.position, this.TextoHorda.transform.rotation);
@@ -237,7 +237,7 @@ public class PlayerManos : MonoBehaviour
 
         } else if (this.ControlNHorda4 == false && this.enemigosSersenados == 30) {
            
-            CrearEnemigos(36);
+            CrearEnemigos(26);
             print("cree enemigos");
             this.ControlNHorda4 = true;
             GameObject HordaText = Instantiate(this.TextoHorda, this.TextoHorda.transform.position, this.TextoHorda.transform.rotation);

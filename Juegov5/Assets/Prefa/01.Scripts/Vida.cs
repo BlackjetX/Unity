@@ -12,6 +12,10 @@ public class Vida : MonoBehaviour
     public GameObject barraSangre;
     //public GameObject gameOver;
 
+    //botiquinees
+    public GameObject Aid1;
+    public GameObject Aid2;
+
     void Start()
     {
         this.salud = 1;    
@@ -37,6 +41,26 @@ public class Vida : MonoBehaviour
             //other.gameObject.GetComponent<DestruirMunicion>().DestruirMunicionMetodo();
             //Destroy(other, 0f);
             print("Recoge municion");
+        }
+        if (other.tag == "botiquin1") {
+         
+                this.salud = this.salud + 0.36f;
+                this.barraSangre.GetComponent<Image>().fillAmount = this.salud;
+                Destroy(Aid1);
+            
+            
+        }
+        if (other.tag == "botiquin2")
+        {
+           
+                this.salud = this.salud + 0.36f;
+                this.barraSangre.GetComponent<Image>().fillAmount = this.salud;
+                Destroy(Aid2);
+
+
+        }
+        if (other.name == "Portal") {
+            SceneManager.LoadScene("GameOver");
         }
 
         print("name "+ other.name);

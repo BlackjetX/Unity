@@ -7,6 +7,8 @@ TagManager:
   - ammo
   - ammo1
   - ammo2
+  - botiquin1
+  - botiquin2
   layers:
   - Default
   - TransparentFX
