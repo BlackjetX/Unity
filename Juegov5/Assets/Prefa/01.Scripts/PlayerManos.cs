@@ -34,7 +34,11 @@ public class PlayerManos : MonoBehaviour
     int EstadoHorda;
     public GameObject TextoHorda;
     public Text TextoHordaNumero;
-  
+    public bool ControlNHorda1 = false;
+    public bool ControlNHorda2 = false;
+    public bool ControlNHorda3 = false;
+    public bool ControlNHorda4 = false;
+    public bool ControlNHorda5 = false;
     public GameObject FirsPerson;
     //este tiene el collider
     //fin municion
@@ -194,15 +198,14 @@ public class PlayerManos : MonoBehaviour
     }
 
     public void ControlHordas() {
-
+   
         EnemigosSercenadosText.text = "Zombies " +"\n   "+this.enemigosSersenados;
-        if (this.enemigosSersenados == 0)
+        if (this.ControlNHorda1 == false && this.enemigosSersenados==0)
+
         {
+            this.ControlNHorda1 = true;
             CrearEnemigos(36);
             print("cree enemigos");
-            this.enemigosSersenados++;
-            //this.TextoHorda.SetActive(true);
-
             GameObject HordaText = Instantiate(this.TextoHorda, this.TextoHorda.transform.position, this.TextoHorda.transform.rotation);
             HordaText.SetActive(true);
             Destroy(HordaText, 5.5f);
@@ -211,32 +214,32 @@ public class PlayerManos : MonoBehaviour
 
 
         }
-        else if (this.enemigosSersenados == 5)
+        else if (this.ControlNHorda2 == false && this.enemigosSersenados == 5)
         {
 
-            this.TextoHordaNumero.text = "2";
+  
             CrearEnemigos(19);
             print("cree enemigos");
-            this.enemigosSersenados++;
+            this.ControlNHorda2=true;
             GameObject HordaText = Instantiate(this.TextoHorda, this.TextoHorda.transform.position, this.TextoHorda.transform.rotation);
             HordaText.SetActive(true);
             Destroy(HordaText, 5.5f);
         }
-        else if (this.enemigosSersenados == 15) {
-            this.TextoHordaNumero.text = "3";
+        else if (this.ControlNHorda3 == false && this.enemigosSersenados == 15) {
+            this.ControlNHorda3 = true;
             CrearEnemigos(35);
             print("cree enemigos");
-            this.enemigosSersenados++;
+      
 
             GameObject HordaText = Instantiate(this.TextoHorda, this.TextoHorda.transform.position, this.TextoHorda.transform.rotation);
             HordaText.SetActive(true);
             Destroy(HordaText, 5.5f);
 
-        } else if (this.enemigosSersenados == 30) {
-            this.TextoHordaNumero.text = "4";
+        } else if (this.ControlNHorda4 == false && this.enemigosSersenados == 30) {
+           
             CrearEnemigos(36);
             print("cree enemigos");
-            this.enemigosSersenados++;
+            this.ControlNHorda4 = true;
             GameObject HordaText = Instantiate(this.TextoHorda, this.TextoHorda.transform.position, this.TextoHorda.transform.rotation);
             HordaText.SetActive(true);
             Destroy(HordaText, 5.5f);
