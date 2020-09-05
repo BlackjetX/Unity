@@ -32,7 +32,7 @@ public class Vida : MonoBehaviour
             if(this.salud<=0)
             {
                 //this.gameOver.SetActive(true);
-                SceneManager.LoadScene("GameOver");
+                SceneManager.LoadScene("Ganaste");
             }
         }
         if(other.name=="AmmoBox")

@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/GameOver.unity
     guid: 8ebdd4703abd58742ad3656140fe08af
+  - enabled: 1
+    path: Assets/Ganaste.unity
+    guid: e6a23d117b705e34bb0108ba0c6f7731
   m_configObjects: {}

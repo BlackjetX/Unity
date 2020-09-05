@@ -59,8 +59,8 @@ public class PlayerManos : MonoBehaviour
         this.balasReserva = 210;
         this.Rabia = 0;
         this.animaciones = this.GetComponent<Animation>();
-        Balas.text = "Balas: " + balasCargador + "/" + balasReserva;
-        puntaje.text = "Rabia: " + Rabia;
+        Balas.text = "Bullets: " + balasCargador + "/" + balasReserva;
+        puntaje.text = "Score: " + Rabia;
         CrearEnemigos(80);
         controladorBalas("");
         MedidorRabia(0);
@@ -77,19 +77,19 @@ public class PlayerManos : MonoBehaviour
         if (modificacionBalas == "disparo")
         {
             this.balasCargador--;
-            Balas.text = "Balas: " + balasCargador + "/" + balasReserva;
+            Balas.text = "Bullets: " + balasCargador + "/" + balasReserva;
         }
         else if (modificacionBalas == "municion")
         {
             if (this.balasReserva + 30 <= 210)
             {
                 this.balasReserva += 30;
-                Balas.text = "Balas: " + balasCargador + "/" + balasReserva;
+                Balas.text = "Bullets: " + balasCargador + "/" + balasReserva;
             }
             else
             {
                 this.balasReserva = 210;
-                Balas.text = "Balas: " + balasCargador + "/" + balasReserva;
+                Balas.text = "Bullets: " + balasCargador + "/" + balasReserva;
             }
         }
         else if (modificacionBalas == "recarga")
@@ -111,7 +111,7 @@ public class PlayerManos : MonoBehaviour
                     this.balasReserva -= recarga;
                 }
 
-                Balas.text = "Balas: " + balasCargador + "/" + balasReserva;
+                Balas.text = "Bullets: " + balasCargador + "/" + balasReserva;
 
             }
            
@@ -121,16 +121,11 @@ public class PlayerManos : MonoBehaviour
             }
 
         }
-       
-        
-        
-
-        
-
     }
+    
     void MedidorRabia(int puntos) {
         this.Rabia += puntos;
-        puntaje.text = "Rabia: "+ Rabia;
+        puntaje.text = "Score: "+ Rabia;
         print("me actualice");
     }
 
