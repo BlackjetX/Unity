@@ -10,7 +10,7 @@ public class Vida : MonoBehaviour
     // Start is called before the first frame update
     float salud;
     public GameObject barraSangre;
-    public GameObject gameOver;
+    //public GameObject gameOver;
 
     void Start()
     {
@@ -27,8 +27,8 @@ public class Vida : MonoBehaviour
             this.barraSangre.GetComponent<Image>().fillAmount=this.salud;
             if(this.salud<=0)
             {
-                this.gameOver.SetActive(true);
-                SceneManager.LoadScene("MainMenu");
+                //this.gameOver.SetActive(true);
+                SceneManager.LoadScene("GameOver");
             }
         }
         if(other.name=="AmmoBox")

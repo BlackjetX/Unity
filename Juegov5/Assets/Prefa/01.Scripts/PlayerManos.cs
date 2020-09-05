@@ -31,7 +31,7 @@ public class PlayerManos : MonoBehaviour
     //control hordas
     int enemigosSersenados;
     public Text EnemigosSercenadosText;
-    int EstadoHorda;
+    //int EstadoHorda;
     public GameObject TextoHorda;
     public Text TextoHordaNumero;
     public bool ControlNHorda1 = false;
@@ -52,7 +52,7 @@ public class PlayerManos : MonoBehaviour
     void Start()
     {
         enemigosSersenados =0;
-        EstadoHorda = 0;
+        //EstadoHorda = 0;
         Sonido(this.SonidoFondo.GetComponent<AudioSource>());
         this.balasCargador = 30;
         this.balasReserva = 210;

@@ -21,7 +21,7 @@ public class Enemigo : MonoBehaviour
 
     // Start is called before the first frame update
 
-    int cantidad = 0;
+    //int cantidad = 0;
     void Start()
     {
         impato = 0;
